@@ -4,11 +4,11 @@ module.exports.go = (server) => {
 
     // check if conncection, then console.log
     primus.on('connection', (spark) => {
-        console.log('connection😊');
+        console.log('connection');
 
         // check if data, then console.log
         spark.on('data', (data) => {
-            console.log('data😁', data);
+            console.log('data', data);
 
             //send data back to all clients
             primus.write(data); // all
